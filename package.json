@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/captchagenerator",
+  "version": "1.1.8",
+  "description": "Captcha Generator is a simple tool for generating captchas. It returns a random string of characters that can be used as a captcha.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/captchagenerator-API.git"
+  },
+  "keywords": [
+    "captcha generator","captcha generation","captcha generate","captcha api","captcha tool"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/captchagenerator-API/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/api/captchagenerator?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.7.9"
+  }
+}
