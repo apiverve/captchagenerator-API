@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/captchagenerator",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Captcha Generator is a simple tool for generating captchas. It returns a random string of characters that can be used as a captcha.",
   "main": "index.js",
   "scripts": {
