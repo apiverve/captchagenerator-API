@@ -1,5 +1,4 @@
-Captcha Generator API
-============
+# Captcha Generator API
 
 Captcha Generator is a simple tool for generating captchas. It returns a random string of characters that can be used as a captcha.
 
@@ -7,52 +6,60 @@ Captcha Generator is a simple tool for generating captchas. It returns a random 
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [Captcha Generator API](https://apiverve.com/marketplace/api/captchagenerator)
+This is a Javascript Wrapper for the [Captcha Generator API](https://apiverve.com/marketplace/captchagenerator)
 
 ---
 
 ## Installation
-	npm install @apiverve/captchagenerator --save
+
+Using npm:
+```shell
+npm install @apiverve/captchagenerator
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/captchagenerator
+```
 
 ---
 
 ## Configuration
 
-Before using the captchagenerator API client, you have to setup your account and obtain your API Key.  
+Before using the Captcha Generator API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The Captcha Generator API documentation is found here: [https://docs.apiverve.com/api/captchagenerator](https://docs.apiverve.com/api/captchagenerator).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The Captcha Generator API documentation is found here: [https://docs.apiverve.com/ref/captchagenerator](https://docs.apiverve.com/ref/captchagenerator).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var captchageneratorAPI = require('@apiverve/captchagenerator');
-var api = new captchageneratorAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const captchageneratorAPI = require('@apiverve/captchagenerator');
+const api = new captchageneratorAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
-This API does not require a Query
-```
+```javascript
+// This API does not require a Query
 
-###### Simple Request (using Callback)
-
-```
 api.execute(function (error, data) {
     if (error) {
         return console.error(error);
@@ -62,9 +69,48 @@ api.execute(function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+// This API does not require a Query
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    // This API does not require a Query
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -73,8 +119,7 @@ api.execute(function (error, data) {
     "expires": 1740173352742,
     "solution": "glrbe",
     "downloadURL": "https://storage.googleapis.com/apiverve.appspot.com/captchagenerator/95ba102b-3973-45b6-8849-ab02a06e4821.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1740173352&Signature=S5WBxutmxPr82LlQyROZ15Xff%2BFRvkZV1Yof927tdpsnHVG9mO4yqPVxK9CH7MhzhYWG8OQQAVsGyWMYLQzU06PVSxlAE5g05xnU2Vi513x342yiUSodNaS3vcEkMeA1ioCGRZ%2Bv1n2FCJNOIQbeGxsiTjCiwrkKag9Gl4LS0hOl4Y%2FzF%2BcgxRfQnre3vptcHe1N2fLQf8JNd26hk0IiAms%2Bqj5teE3V1FKDsUmMk583ZQMBsRHjJG0g4KdtgBGujY3TL4jPgdj7D4VjOm%2F3TKj6n5oRkjvkYl64FnGCELW%2FsoEaxChsLrxirz5Rvvq7KD09GYJbuAoNPN9L4cjbAw%3D%3D"
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -87,6 +132,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
@@ -100,7 +146,7 @@ All usage of the APIVerve website, API, and services is subject to the [APIVerve
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
+Copyright (&copy;) 2025 APIVerve, and Evlar LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
